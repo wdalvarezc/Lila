@@ -7,10 +7,10 @@ export default function PedidoTable(props) {
     const color = ["primary", "info", "light", "warning", "success"]
     const [fechaFiltro, setFechaFiltro] = useState("");
 
-    useEffect(()=>{
+    useEffect(() => {
         console.log(props.date);
         setFechaFiltro(props.date)
-    },[])
+    }, [])
 
     return <>
         <div style={{ padding: '1rem' }}>
@@ -54,7 +54,14 @@ export default function PedidoTable(props) {
                             <td>{e.id}</td>
                             <td>{e.status}</td>
                             <td>{e.Customer.name}</td>
-                            <td>{e.Customer.phone}</td>
+                            <td>
+                                <Button
+                                    variant="light"
+                                    href={`tel:+57${e.Customer.phone}`}
+                                >
+                                    📞 Llamar
+                                </Button>
+                            </td>
                             <td>{e.Customer.address}</td>
                             <td>
                                 <ul>
@@ -71,6 +78,6 @@ export default function PedidoTable(props) {
                     })}
                 </tbody>
             </table>
-        </div >;
+        </div>
     </>
 }
