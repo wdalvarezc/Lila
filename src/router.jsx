@@ -8,7 +8,7 @@ import ErrorPage from './pages/error';
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'frontLila/',
     element: <App />,
     children: [
       { index: true, element: <Home /> },
