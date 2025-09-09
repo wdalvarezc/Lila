@@ -1,0 +1,38 @@
+/* Estilo para la fuente Kenan & Kel */
+.kenan-kel-title {
+  font-size: 48px;
+  color: orange;
+  text-shadow: 2px 2px black;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Navbar personalizado */
+.custom-navbar {
+  background-color: #fad643 !important; /* Naranja estilo Nickelodeon */
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: white !important;
+  font-size: 20px;
+}
+body{
+  color: #e2e2e2;
+  background-color: #1a1b19;
+}
+/* Botón divertido */
+.funky-button {
+  background-color: #ff9800;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 24px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 2px 2px black;
+}
+
+.funky-button:hover {
+  background-color: #e65100;
+}
