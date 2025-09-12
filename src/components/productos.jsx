@@ -36,8 +36,10 @@ export default function Productos() {
     }, []);
     return (
         <>
-            <CreateProductModal onSave={handleSaveProduct} />
-            <ProductTable Products={productos ? productos : []} loading={loading}  fetchProductos={fetchProductos}/>
+            <ProductTable Products={productos ? productos : []} loading={loading} fetchProductos={fetchProductos} />
+            <div className="d-flex justify-content-center">
+                <CreateProductModal onSave={handleSaveProduct} />
+            </div>
         </>
     )
 }

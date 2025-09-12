@@ -168,6 +168,6 @@ export default function ProductTable(props) {
                     })}
                 </tbody>
             </table>
-        </div>;
+        </div>
     </>
 }

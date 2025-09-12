@@ -140,7 +140,7 @@ const CreateOrderForm = () => {
                                         <option value="">Selecciona un producto</option>
                                         {products?.map((p) => (
                                             <option key={p.id} value={p.id}>
-                                                {p.name} (Stock: {p.quantity})
+                                                {p.sku} (Stock: {p.quantity})
                                             </option>
                                         ))}
                                     </Form.Select>

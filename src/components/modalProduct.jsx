@@ -37,7 +37,7 @@ function CreateProductModal({ onSave }) {
     return (
         <>
             {/* Botón que abre el modal */}
-            <Button variant="primary" onClick={handleShow}>
+            <Button variant="primary" onClick={handleShow} style={{ display: "flex", justifyContent: "center" }}>
                 ➕ Crear Producto
             </Button>
 
