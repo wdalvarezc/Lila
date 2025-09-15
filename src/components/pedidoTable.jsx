@@ -39,6 +39,7 @@ export default function PedidoTable(props) {
                         <th scope="col">TELÉFONO</th>
                         <th scope="col">DIRECCIÓN</th>
                         <th scope="col">PEDIDO</th>
+                        <th scope="col">DESCRIPCION</th>
                         <th scope="col">PRECIO</th>
                         <th scope="col">ENTREGA</th>
                         <th scope="col">CAMBIO ESTADO</th>
@@ -67,9 +68,12 @@ export default function PedidoTable(props) {
                                 <ul>
                                     {e.Products.map(producto => {
                                         priceTotal += producto.OrderItem.price
-                                        return <li>{`${producto.name} - ${producto.OrderItem.quantity}`}</li>
+                                        return <li>{`${producto.sku} - ${producto.OrderItem.quantity}`}</li>
                                     })}
                                 </ul>
+                            </td>
+                            <td>
+                                {e.Products.map(producto => producto.OrderItem?.description ? <li>{`${producto.OrderItem.description}`}</li>: '')}
                             </td>
                             <td>{priceTotal}</td>
                             <td>{e.deliveryDate?.split('T', 1)}</td>
