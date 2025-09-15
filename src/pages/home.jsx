@@ -8,7 +8,8 @@ const CreateOrderForm = () => {
     const [order, setOrder] = useState({
         customerId: "",
         deliveryDate: "",
-        items: [{ productId: "", quantity: 1 }]
+        items: [{ productId: "", quantity: 1 }],
+        description: '',
     });
 
     // Estado para el modal de cliente
@@ -171,6 +172,17 @@ const CreateOrderForm = () => {
                     <Button variant="secondary" onClick={addItem} className="mb-3">
                         ➕ Agregar otro producto
                     </Button>
+                    {/* Fecha de entrega */}
+                    <Form.Group className="mb-3 w-50" controlId="exampleForm.ControlTextarea1">
+                        <Form.Label>Descripción</Form.Label>
+                        <Form.Control
+                            type="text"
+                            as='textarea'
+                            name="description"
+                            value={order.description}
+                            onChange={handleChange}
+                        />
+                    </Form.Group>
 
                     <div className="text-center">
                         <Button variant="primary" type="submit" size="lg">
